@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text Utils</title>
+    <style>
+        /* .centered{
+            text-align: center;
+        } */
+        h1{
+            color: white;
+            text-align: center;
+        }
+        body{
+            background-color: crimson;
+        }
+            /* form{
+                background-color: ;
+            } */
+        textarea{
+            background-color: beige;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            font-size: larger;
+        }
+        button{
+            background-color: beige;
+        }
+
+    </style>    
+</head>
+<body>
+    <!-- <div class="centered"> -->
+    <h1>Welcome to Text analyzer. Enter your text below.</h1>
+
+    <form action="/analyze/" method="post" >{% csrf_token %}
+        
+        <textarea name="text" id="" cols="30" rows="10" spellcheck="false" style="width: 1511px; height: 127px;"></textarea>
+        <!-- <div class="div1"> -->
+        <input type="checkbox" name="removepunc" id=""> Remove punctuations
+        <input type="checkbox" name="removespace" id=""> Remove space
+        <input type="checkbox" name="uppercase"> Convert to uppercase
+        <input type="checkbox" name="charcounter"> Count characters
+        <input type="checkbox" name="lowercase"> Convert to lowercase<br><br>
+        <button type="submit">Analyze text</button> 
+        <!-- </div> -->
+    </form>
+</body>
+</html>
